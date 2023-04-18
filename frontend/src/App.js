@@ -32,9 +32,9 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", backgroundColor: "#FFF8DC", minHeight: "100vh", padding: "30px 0" }}>
+    <div style={{ textAlign: "center", backgroundColor: "#89CFF0", minHeight: "100vh", padding: "30px 0" }}>
       <h1 style={{ fontSize: "36px", margin: "20px 0", color: "#666" }}>
-        Hi<span style={{ backgroundColor: "#FFD700" }}>Lite</span>
+        HiLite
       </h1>
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
         <button
