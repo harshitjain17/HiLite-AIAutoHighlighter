@@ -1,12 +1,3 @@
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-
-@app.route('/generate', methods=['POST'])
-def generate():
-    data = request.get_json()
-    output = {'message': 'Hello ' + data['text']}
-    return jsonify(output)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+def generate_output(input_text):
+    output_text = input_text.upper()  # example: return input text in uppercase
+    return output_text

@@ -11,21 +11,16 @@ function App() {
     setText(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    fetch("/script/generate", {
-      method: "POST",
-      body: JSON.stringify({ text: text }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => console.error(error));
+    axios.post('/generate_output', { text })
+    .then(response => {
+      setOutput(response.data.output);
+      console.log(output);
+    });
   };
+
+  
 
   return (
     <div>
@@ -50,6 +45,7 @@ function App() {
       </button>
 
       <p>SCRIPT RESPONSE: </p>
+      <p> {output} </p>
     </div>
   );
 }
