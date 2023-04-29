@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 
 function App() {
   const [inputOption, setInputOption] = useState("text");
@@ -8,7 +8,7 @@ function App() {
 
   const handleInputChange = (event) => {
     setText(event.target.value);
-  }; 
+  };
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -21,16 +21,13 @@ function App() {
 
     reader.readAsText(file);
   };
- 
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     axios
       .post("/generate_output", { text })
       .then((response) => {
         setOutput(response.data.output);
-      })
-      .catch(error => {
-        console.log(error.response)
       });
   };
 
@@ -72,7 +69,7 @@ function App() {
               onChange={handleInputChange}
               id="text"
               name="text"
-              placeholder="Enter text..." 
+              placeholder="Enter text..."
             />
           </div>
         )}
@@ -101,9 +98,12 @@ function App() {
       Submit
     </button>
   </form>
-  <p style={{ fontSize: '18px', color: '#666' }}>Summarized texts: </p>
+  <p style={{ fontSize: '18px', color: '#666' }}>SCRIPT RESPONSE: </p>
   <p style={{ fontSize: '18px', margin: '20px 0', color: '#666' }}>{output}</p>
 </div>
+
+
+
 
   );
 }
