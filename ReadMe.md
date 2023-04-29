@@ -78,6 +78,10 @@ HiLite is an auto highlighter that automatically identifies and highlights key p
 
   Despite their effectiveness, LSTMs can be computationally expensive, especially for long sequences. This limitation led to the development of more advanced architectures like the Transformer, which relies on self-attention mechanisms to efficiently process and model long-range dependencies in data. As a result, Transformer-based models have become state-of-the-art in many natural language processing tasks, but LSTMs still have their place in certain applications and continue to be researched and improved upon.
 
+# Screenshots:
+
+![frontend](/files/frontend.jpg?raw=true)
+
 # Setup / Installation: 💻
 
 To install the dependencies and devDependencies for this project, you can run the following commands:
@@ -113,10 +117,6 @@ This will start running the react application named `ui` at http://localhost:300
 - `PyTorch` Library
 - `NLTKStalkword` Library
 - `Spacy` Library
-
-# Approach: 🚶
-
-Once the react app `ui` starts running on the localhost, it will ask the user for pasting the text. The response time for the model is about 15 seconds
 
 # Credits:
 
