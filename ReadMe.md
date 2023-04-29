@@ -118,7 +118,7 @@ This will start running the react application named `ui` at http://localhost:300
 - `CSS`
 - `Hugging Face` Repository
 - `PyTorch` Library
-- `NLTKStalkword` Library
+- `NLTK Stop Words` Library
 - `Spacy` Library
 
 # Credits:
