@@ -116,6 +116,7 @@ This will start running the react application named `ui` at http://localhost:300
 - `Flask`
 - `React.js` - `JavaScript`, `HTML`
 - `CSS`
+- `Hugging Face` Repository
 - `PyTorch` Library
 - `NLTKStalkword` Library
 - `Spacy` Library
