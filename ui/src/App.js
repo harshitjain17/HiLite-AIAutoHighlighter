@@ -10,18 +10,6 @@ function App() {
     setText(event.target.value);
   }; 
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = (event) => {
-      const contents = event.target.result;
-      setText(contents);
-    };
-
-    reader.readAsText(file);
-  };
- 
   const handleSubmit = async (event) => {
     event.preventDefault();
     axios
@@ -45,12 +33,6 @@ function App() {
           onClick={() => setInputOption("text")}
         >
           Paste Text
-        </button>
-        <button
-          style={{ margin: "0 10px", padding: "10px 20px", background: inputOption === "file" ? "#666" : "#fff", color: inputOption === "file" ? "#fff" : "#666", border: "2px solid #ccc" }}
-          onClick={() => setInputOption("file")}
-        >
-          Upload File
         </button>
       </div>
       <form onSubmit={handleSubmit}>
@@ -76,13 +58,6 @@ function App() {
             />
           </div>
         )}
-        {inputOption === "file" && (
-          <div>
-            <p style={{ fontSize: "18px", color: "#666" }}>Upload a file:</p>
-            <input type="file" accept=".txt,.doc,.docx,.pdf" onChange={handleFileChange} style={{ marginBottom: "20px" }} />
-          </div>
-        )}
-        <br />
     <button
       type="submit"
       className="w3-button w3-blue"
