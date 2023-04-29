@@ -78,7 +78,7 @@ def generate_output(input_text):
     text = get_first_letter_uppercase_and_rest_lowercase(input_text)
     text = make_paragraph_utf_encoding_friendly(text)
     text = "summarize: " + input_text
-    summarizer = pipeline("summarization", model="SahilKuw/442FinalProj")
+    summarizer = pipeline("summarization", model="SahilKuw/442FinalProj") # model
     output = get_first_letter_uppercase_and_rest_lowercase(summarizer(text)[0]['summary_text'])
     return output
 
@@ -90,7 +90,3 @@ def generate_output(input_text):
 # Anya is just one of millions of climate refugees around the world. They are the victims of a global crisis that we have all created. But they are also the heroes of our time. They are the ones who are fighting for a better future, and they are the ones who will ultimately save us all.
 # '''
 # print(generate_output(text))
-
-# def generate_output(input_text):
-#     output_text = input_text.upper()  # example: return input text in uppercase
-#     return output_text
